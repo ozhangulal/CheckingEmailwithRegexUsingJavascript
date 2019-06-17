@@ -1,0 +1,46 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <title></title>
+    <link href="Content/bootstrap.min.css" rel="stylesheet" />
+    <script type="text/javascript" src="http://code.jquery.com/jquery-1.8.2.js"></script>
+    <script type="text/javascript">
+
+        $(function () {
+
+            $('#btnCheck').click(function () {
+
+                var filter = /^([a-zA-Z0-9_\.\-])+\@(([a-zA-Z0-9\-])+\.)+([a-zA-Z0-9]{2,4})+$/;
+                var email = $('#txtEmail');
+
+                if (filter.test(email.value)) {
+
+                    //return true;
+
+                    alert('test');
+
+                }
+                else {
+
+                    alert('Please enter your @ozhangulal.com email address !');
+                }
+
+            })
+
+        })
+
+    </script>
+</head>
+<body class="bg-light">
+    <div id="firstDivision" style="width:300px; height:100px; margin-left:100px; margin-top:50px;">
+        <div class="input-group mb-3">
+            <div class="input-group-prepend">
+                <span class="input-group-text" id="basic-addon1">@</span>
+            </div>
+            <input type="text" class="form-control" placeholder="E-Mail" aria-label="Username" aria-describedby="basic-addon1" id="txtEmail">
+            <button type="button" class="btn btn-primary" id="btnCheck">Submit</button>
+        </div>
+    </div>
+</body>
+</html>
